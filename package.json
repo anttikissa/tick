@@ -1,0 +1,27 @@
+{
+  "name": "tick",
+  "version": "0.0.1",
+  "description": "A simple timer utility",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "basic-log": "~0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/anttisykari/tick"
+  },
+  "keywords": [
+    "performance",
+    "timer",
+    "profiler"
+  ],
+  "author": "Antti Sykäri",
+  "license": "BSD"
+}

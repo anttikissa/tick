@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var log = require('basic-log');
+
+log('Hello!');
+/*var tick = require('tick');
+
+tick.start('x');
+
+tick('this');
+tick('that');
+
+for (var i = 0; i < 10; i++) {
+	tick('third');
+}
+
+tick.end('x');
+
+*/
