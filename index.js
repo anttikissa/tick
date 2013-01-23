@@ -2,8 +2,8 @@ var log = require('basic-log');
 
 function Tick(opts) {
 	function tick() {
-		var args = Array.prototype.join.call(arguments);
-		log('tick ' + args);
+		var args = Array.prototype.slice.call(arguments);
+		log('tick(' + args.join(', ') + ')');
 	}
 
 	tick.__proto__ = this.__proto__;
