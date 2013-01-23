@@ -1,20 +1,27 @@
 var log = require('basic-log');
 
-function tick() {
-	var args = Array.prototype.join.call(arguments);
-	log('tick ' + args);
+function Tick(opts) {
+	function tick() {
+		var args = Array.prototype.join.call(arguments);
+		log('tick ' + args);
+	}
+
+	tick.__proto__ = this.__proto__;
+
+	return tick;
 }
 
-function start() {
+Tick.prototype = Object.create(Function.prototype);
+
+Tick.prototype.start = function() {
 	log('start');
 }
 
-function end() {
+Tick.prototype.end = function() {
 	log('end');
 }
 
-tick.start = start;
-tick.end = end;
+var tick = new Tick();
 
 module.exports = tick;
 
