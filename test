@@ -5,7 +5,7 @@ var log = require('basic-log');
 log('Hello!');
 /*var tick = require('tick');
 
-tick.start('x');
+tick.start();
 
 tick('this');
 tick('that');
@@ -14,6 +14,15 @@ for (var i = 0; i < 10; i++) {
 	tick('third');
 }
 
-tick.end('x');
+tick.end();
 
 */
+
+var tick = require('./');
+tick.start();
+tick('process', '1');
+tick('process', '2');
+tick.end();
+
+//var myTick = new tick.Tick();
+
